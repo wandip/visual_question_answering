@@ -11,7 +11,7 @@ from torch.optim import lr_scheduler
 from data_loader import get_loader
 from models import VqaModel, SANModel
 import warnings 
-
+import time
 warnings.filterwarnings("ignore")
 #from resize_images import resize_image
 
@@ -24,8 +24,8 @@ def load_str_list(fname):
     return lines
 
 
-qst_vocab = load_str_list("datasets/vocab_questions.txt")
-ans_vocab = load_str_list("datasets/vocab_answers.txt")
+qst_vocab = load_str_list("/scratch2/dpwani/dataset/vocab_questions.txt")
+ans_vocab = load_str_list("/scratch2/dpwani/dataset/vocab_answers.txt")
 word2idx_dict = {w:n_w for n_w, w in enumerate(qst_vocab)}
 unk2idx = word2idx_dict['<unk>'] if '<unk>' in word2idx_dict else None
 vocab_size = len(qst_vocab)
@@ -92,6 +92,7 @@ def main(args):
     model = model.to(device)
     #torch.cuda.empty_cache()
     model.eval()
+    s_time = time.time()
     output = model(image, question)
       
 #     Visualization yet to be implemented
@@ -102,6 +103,7 @@ def main(args):
     probs, indices = torch.topk(predicts, k=5, dim=1)
     probs = probs.squeeze()
     indices = indices.squeeze()
+    print(time.time()-s_time)
     print("predicted - probabilty")
     for i in range(5):
 #         print(probs.size(), indices.size())

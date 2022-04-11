@@ -1,0 +1,64 @@
+==========================================
+SLURM_JOB_ID = 7967212
+SLURM_JOB_NODELIST = d14-15
+TMPDIR = /tmp/SLURM_7967212
+==========================================
++---------------------------------------+------------+
+|                Modules                | Parameters |
++---------------------------------------+------------+
+|  img_encoder.model.features.0.weight  |    1728    |
+|   img_encoder.model.features.0.bias   |     64     |
+|  img_encoder.model.features.2.weight  |   36864    |
+|   img_encoder.model.features.2.bias   |     64     |
+|  img_encoder.model.features.5.weight  |   73728    |
+|   img_encoder.model.features.5.bias   |    128     |
+|  img_encoder.model.features.7.weight  |   147456   |
+|   img_encoder.model.features.7.bias   |    128     |
+|  img_encoder.model.features.10.weight |   294912   |
+|   img_encoder.model.features.10.bias  |    256     |
+|  img_encoder.model.features.12.weight |   589824   |
+|   img_encoder.model.features.12.bias  |    256     |
+|  img_encoder.model.features.14.weight |   589824   |
+|   img_encoder.model.features.14.bias  |    256     |
+|  img_encoder.model.features.16.weight |   589824   |
+|   img_encoder.model.features.16.bias  |    256     |
+|  img_encoder.model.features.19.weight |  1179648   |
+|   img_encoder.model.features.19.bias  |    512     |
+|  img_encoder.model.features.21.weight |  2359296   |
+|   img_encoder.model.features.21.bias  |    512     |
+|  img_encoder.model.features.23.weight |  2359296   |
+|   img_encoder.model.features.23.bias  |    512     |
+|  img_encoder.model.features.25.weight |  2359296   |
+|   img_encoder.model.features.25.bias  |    512     |
+|  img_encoder.model.features.28.weight |  2359296   |
+|   img_encoder.model.features.28.bias  |    512     |
+|  img_encoder.model.features.30.weight |  2359296   |
+|   img_encoder.model.features.30.bias  |    512     |
+|  img_encoder.model.features.32.weight |  2359296   |
+|   img_encoder.model.features.32.bias  |    512     |
+|  img_encoder.model.features.34.weight |  2359296   |
+|   img_encoder.model.features.34.bias  |    512     |
+| img_encoder.model.classifier.0.weight | 102760448  |
+|  img_encoder.model.classifier.0.bias  |    4096    |
+| img_encoder.model.classifier.3.weight |  16777216  |
+|  img_encoder.model.classifier.3.bias  |    4096    |
+|         img_encoder.fc.weight         |  4194304   |
+|          img_encoder.fc.bias          |    1024    |
+|      qst_encoder.word2vec.weight      |  5356800   |
+|     qst_encoder.lstm.weight_ih_l0     |   614400   |
+|     qst_encoder.lstm.weight_hh_l0     |  1048576   |
+|      qst_encoder.lstm.bias_ih_l0      |    2048    |
+|      qst_encoder.lstm.bias_hh_l0      |    2048    |
+|     qst_encoder.lstm.weight_ih_l1     |  1048576   |
+|     qst_encoder.lstm.weight_hh_l1     |  1048576   |
+|      qst_encoder.lstm.bias_ih_l1      |    2048    |
+|      qst_encoder.lstm.bias_hh_l1      |    2048    |
+|         qst_encoder.fc.weight         |  2097152   |
+|          qst_encoder.fc.bias          |    1024    |
+|               fc1.weight              |  1024000   |
+|                fc1.bias               |    1000    |
+|               fc2.weight              |  1000000   |
+|                fc2.bias               |    1000    |
++---------------------------------------+------------+
+Total Trainable Params: 157014864
+157014864

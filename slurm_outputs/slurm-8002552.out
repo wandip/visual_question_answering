@@ -1,0 +1,23 @@
+==========================================
+SLURM_JOB_ID = 8002552
+SLURM_JOB_NODELIST = a04-06
+TMPDIR = /tmp/SLURM_8002552
+==========================================
+Traceback (most recent call last):
+  File "/home1/dpwani/vqa_baseline/visual_question_answering/train.py", line 8, in <module>
+    from data_loader import get_loader
+  File "/home1/dpwani/vqa_baseline/visual_question_answering/data_loader.py", line 5, in <module>
+    import torchvision.transforms as transforms
+  File "/home1/dpwani/.conda/envs/dipak-vqa-2/lib/python3.10/site-packages/torchvision/__init__.py", line 2, in <module>
+    from torchvision import datasets
+  File "/home1/dpwani/.conda/envs/dipak-vqa-2/lib/python3.10/site-packages/torchvision/datasets/__init__.py", line 9, in <module>
+    from .fakedata import FakeData
+  File "/home1/dpwani/.conda/envs/dipak-vqa-2/lib/python3.10/site-packages/torchvision/datasets/fakedata.py", line 3, in <module>
+    from .. import transforms
+  File "/home1/dpwani/.conda/envs/dipak-vqa-2/lib/python3.10/site-packages/torchvision/transforms/__init__.py", line 1, in <module>
+    from .transforms import *
+  File "/home1/dpwani/.conda/envs/dipak-vqa-2/lib/python3.10/site-packages/torchvision/transforms/transforms.py", line 17, in <module>
+    from . import functional as F
+  File "/home1/dpwani/.conda/envs/dipak-vqa-2/lib/python3.10/site-packages/torchvision/transforms/functional.py", line 5, in <module>
+    from PIL import Image, ImageOps, ImageEnhance, PILLOW_VERSION
+ImportError: cannot import name 'PILLOW_VERSION' from 'PIL' (/home1/dpwani/.conda/envs/dipak-vqa-2/lib/python3.10/site-packages/PIL/__init__.py)

@@ -14,7 +14,7 @@ class ImgEncoder(nn.Module):
            (3) Normalize feature vector.
         """
         super(ImgEncoder, self).__init__()
-        model = models.vgg19(pretrained=True)
+        model = models.mobilenet_v2(pretrained=True)
         in_features = model.classifier[-1].in_features  # input size of feature vector
         model.classifier = nn.Sequential(
             *list(model.classifier.children())[:-1])    # remove last fc layer
@@ -97,7 +97,7 @@ class ImgAttentionEncoder(nn.Module):
            (3) Normalize feature vector.
         """
         super(ImgAttentionEncoder, self).__init__()
-        vggnet_feat = models.vgg19(pretrained=True).features
+        vggnet_feat = models.mobilenet_v2(pretrained=True).features
         modules = list(vggnet_feat.children())[:-2]
         self.cnn = nn.Sequential(*modules)
         self.fc = nn.Sequential(nn.Linear(self.cnn[-3].out_channels, embed_size),

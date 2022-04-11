@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 7965104
+SLURM_JOB_NODELIST = d13-03
+TMPDIR = /tmp/SLURM_7965104
+==========================================
+predicted - probabilty
+'<unk>' - 0.2052
+'sitting' - 0.1155
+'standing' - 0.0646
+'walking' - 0.0382
+'nothing' - 0.0262

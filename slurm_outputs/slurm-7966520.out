@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 7966520
+SLURM_JOB_NODELIST = d11-03
+TMPDIR = /tmp/SLURM_7966520
+==========================================
+predicted - probabilty
+'cat' - 0.5882
+'bird' - 0.1811
+'dog' - 0.0590
+'none' - 0.0404
+'birds' - 0.0178

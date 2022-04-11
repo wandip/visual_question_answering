@@ -62,9 +62,9 @@ def vqa_processing(image_dir, annotation_file, question_file, valid_answer_set, 
 
 def main(args):
     
-    image_dir = args.input_dir+'/%s/'
-    annotation_file = args.input_dir+'/Annotations/v2_mscoco_%s_annotations.json'
-    question_file = args.input_dir+'/Questions/v2_OpenEnded_mscoco_%s_questions.json'
+    image_dir = args.input_dir+'/resized_images/%s/'
+    annotation_file = args.input_dir+'/annotations/v2_mscoco_%s_annotations.json'
+    question_file = args.input_dir+'/questions/v2_OpenEnded_mscoco_%s_questions.json'
 
     vocab_answer_file = args.output_dir+'/vocab_answers.txt'
 #     answer_dict = text_processing.VocabDict(vocab_answer_file)
@@ -73,14 +73,14 @@ def main(args):
     
     train = vqa_processing(image_dir, annotation_file, question_file, valid_answer_set, 'train2014')
     valid = vqa_processing(image_dir, annotation_file, question_file, valid_answer_set, 'val2014')
-    test = vqa_processing(image_dir, annotation_file, question_file, valid_answer_set, 'test2015')
-    test_dev = vqa_processing(image_dir, annotation_file, question_file, valid_answer_set, 'test-dev2015')
+    # test = vqa_processing(image_dir, annotation_file, question_file, valid_answer_set, 'test2015')
+    # test_dev = vqa_processing(image_dir, annotation_file, question_file, valid_answer_set, 'test-dev2015')
     
     np.save(args.output_dir+'/train.npy', np.array(train))
     np.save(args.output_dir+'/valid.npy', np.array(valid))
     np.save(args.output_dir+'/train_valid.npy', np.array(train+valid))
-    np.save(args.output_dir+'/test.npy', np.array(test))
-    np.save(args.output_dir+'/test-dev.npy', np.array(test_dev))
+    # np.save(args.output_dir+'/test.npy', np.array(test))
+    # np.save(args.output_dir+'/test-dev.npy', np.array(test_dev))
 
 
 if __name__ == '__main__':

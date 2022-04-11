@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 7966501
+SLURM_JOB_NODELIST = d11-03
+TMPDIR = /tmp/SLURM_7966501
+==========================================
+predicted - probabilty
+'yes' - 0.0599
+'no' - 0.0548
+'outside' - 0.0529
+'ground' - 0.0504
+'left' - 0.0365

@@ -1,0 +1,13 @@
+==========================================
+SLURM_JOB_ID = 8032842
+SLURM_JOB_NODELIST = d11-04
+TMPDIR = /tmp/SLURM_8032842
+==========================================
+Traceback (most recent call last):
+  File "/home1/dpwani/vqa_baseline/visual_question_answering/params.py", line 18, in <module>
+    model = torch.load('/scratch2/dpwani/dataset/models/mobilenet/best_model.pt')
+  File "/home1/dpwani/.local/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/home1/dpwani/.local/lib/python3.9/site-packages/torch/serialization.py", line 853, in _load
+    result = unpickler.load()
+ModuleNotFoundError: No module named 'torchvision.models.mobilenetv2'

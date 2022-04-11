@@ -18,7 +18,9 @@ def resize_images(input_dir, output_dir, size):
         if not idir.is_dir():
             continue
         if not os.path.exists(output_dir+'/'+idir.name):
-            os.makedirs(output_dir+'/'+idir.name)    
+            os.makedirs(output_dir+'/'+idir.name)
+        if idir.name != "test2015":
+            continue
         images = os.listdir(idir.path)
         n_images = len(images)
         for iimage, image in tqdm(enumerate(images)):

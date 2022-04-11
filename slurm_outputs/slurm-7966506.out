@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 7966506
+SLURM_JOB_NODELIST = d14-15
+TMPDIR = /tmp/SLURM_7966506
+==========================================
+predicted - probabilty
+'yellow' - 0.1731
+'red' - 0.1431
+'black' - 0.1425
+'green' - 0.1395
+'white' - 0.1298

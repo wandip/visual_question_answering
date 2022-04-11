@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 7965107
+SLURM_JOB_NODELIST = d13-03
+TMPDIR = /tmp/SLURM_7965107
+==========================================
+predicted - probabilty
+'nothing' - 0.0886
+'umbrella' - 0.0639
+'phone' - 0.0560
+'bag' - 0.0441
+'tennis racket' - 0.0416

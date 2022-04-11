@@ -29,22 +29,22 @@ def main(args):
     ans_vocab_size = data_loader['train'].dataset.ans_vocab.vocab_size
     ans_unk_idx = data_loader['train'].dataset.ans_vocab.unk2idx
 
-#     model = VqaModel(
-#         embed_size=args.embed_size,
-#         qst_vocab_size=qst_vocab_size,
-#         ans_vocab_size=ans_vocab_size,
-#         word_embed_size=args.word_embed_size,
-#         num_layers=args.num_layers,
-#         hidden_size=args.hidden_size).to(device)
-
-
-    model = SANModel(
+    model = VqaModel(
         embed_size=args.embed_size,
         qst_vocab_size=qst_vocab_size,
         ans_vocab_size=ans_vocab_size,
         word_embed_size=args.word_embed_size,
         num_layers=args.num_layers,
         hidden_size=args.hidden_size).to(device)
+
+
+    # model = SANModel(
+    #     embed_size=args.embed_size,
+    #     qst_vocab_size=qst_vocab_size,
+    #     ans_vocab_size=ans_vocab_size,
+    #     word_embed_size=args.word_embed_size,
+    #     num_layers=args.num_layers,
+    #     hidden_size=args.hidden_size).to(device)
     
     criterion = nn.CrossEntropyLoss()
 
@@ -80,8 +80,6 @@ def main(args):
                 model.eval()
 
             for batch_idx, batch_sample in enumerate(data_loader[phase]):
-<<<<<<< refs/remotes/origin/master
-<<<<<<< refs/remotes/origin/master
 #                 if batch_idx == 1:
 #                     break
                 image = batch_sample['image'].to(device)
@@ -111,8 +109,7 @@ def main(args):
 
                 # Print the average loss after every batch.
                 if batch_idx % 1 == 0:
-                    print('| {} SET | Epoch [{:02d}/{:02d}], Step [{:04d}/{:04d}], Loss: {:.4f}'
-                          .format(phase.upper(), epoch+1, args.num_epochs, batch_idx, int(batch_step_size), loss.item()), end = '\r')
+                    print('| {} SET | Epoch [{:02d}/{:02d}], Step [{:04d}/{:04d}], Loss: {:.4f}'.format(phase.upper(), epoch+1, args.num_epochs, batch_idx, int(batch_step_size), loss.item()), end = '\r')
 
             # Print the average loss and accuracy in an epoch.
             epoch_loss = running_loss / batch_step_size
@@ -160,13 +157,13 @@ if __name__ == '__main__':
     parser.add_argument('--model_name', type=str,
                         help='model name.') 
 
-    parser.add_argument('--input_dir', type=str, default='./datasets',
+    parser.add_argument('--input_dir', type=str, default='/scratch2/dpwani/dataset',
                         help='input directory for visual question answering.')
 
-    parser.add_argument('--log_dir', type=str, default='./logs',
+    parser.add_argument('--log_dir', type=str, default='/scratch2/dpwani/dataset/logs',
                         help='directory for logs.')
 
-    parser.add_argument('--model_dir', type=str, default='./models',
+    parser.add_argument('--model_dir', type=str, default='/scratch2/dpwani/dataset/models/mobilenet',
                         help='directory for saved models.')
 
     parser.add_argument('--max_qst_length', type=int, default=30,

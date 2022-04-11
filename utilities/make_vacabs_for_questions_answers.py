@@ -13,6 +13,7 @@ def make_vocab_questions(input_dir):
     question_length = []
     datasets = os.listdir(input_dir)
     for dataset in datasets:    
+        print(os.path.join(input_dir,dataset))
         with open(os.path.join(input_dir,dataset)) as f:
             questions = json.load(f)['questions']
         set_question_length = [None]*len(questions)
@@ -65,8 +66,8 @@ def make_vocab_answers(input_dir, n_answers):
 def main(args):
     input_dir = args.input_dir
     n_answers = args.n_answers
-    make_vocab_questions(input_dir+'/Questions')
-    make_vocab_answers(input_dir+'/Annotations', n_answers)
+    make_vocab_questions(input_dir+'/questions')
+    make_vocab_answers(input_dir+'/annotations', n_answers)
 
 
 if __name__ == '__main__':

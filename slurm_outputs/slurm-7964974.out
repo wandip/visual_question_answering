@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 7964974
+SLURM_JOB_NODELIST = d13-03
+TMPDIR = /tmp/SLURM_7964974
+==========================================
+predicted - probabilty
+'street' - 0.1555
+'outside' - 0.0784
+'car' - 0.0550
+'road' - 0.0528
+'sidewalk' - 0.0498

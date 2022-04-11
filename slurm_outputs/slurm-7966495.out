@@ -1,0 +1,11 @@
+==========================================
+SLURM_JOB_ID = 7966495
+SLURM_JOB_NODELIST = d11-04
+TMPDIR = /tmp/SLURM_7966495
+==========================================
+predicted - probabilty
+'hat' - 0.3142
+'hair' - 0.1776
+'nothing' - 0.1276
+'sunglasses' - 0.0462
+'bow' - 0.0386
